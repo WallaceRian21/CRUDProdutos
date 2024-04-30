@@ -1,0 +1,12 @@
+##### LOCAWEB - NAO REMOVER #####
+#AddHandler php74-script .php
+#suPHP_ConfigPath /home/regtransportes1/
+###### LOCAWEB - NAO REMOVER #####
+#RewriteEngine On
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://www.regtransportes.com.br/$1 [R,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
